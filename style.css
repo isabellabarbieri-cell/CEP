@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #90b3eb;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.magica {
+  position: relative;
+  padding: 50px 80px;
+  text-align: center;
+  color: white;
+  border-radius: 25px;
+  background: linear-gradient(
+    135deg,
+    #7aa3e0,
+    #0875c9,
+    #00bfff,
+    #99b7e6
+  );
+  background-size: 300% 300%;
+  animation: azul 6s ease infinite;
+
+  box-shadow:
+    0 0 20px #008cff,
+    0 0 50px #006eff,
+    0 0 100px #004cff;
+}
+
+.magica::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 28px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #6ee7ff,
+    transparent
+  );
+  animation: brilho 3s linear infinite;
+  z-index: -1;
+}
+
+h1 {
+  font-size: 45px;
+  margin: 0 0 10px;
+  text-shadow: 0 0 15px #7eeaff;
+}
+
+p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+@keyframes azul {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes brilho {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
