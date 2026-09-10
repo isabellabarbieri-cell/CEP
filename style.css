@@ -1,82 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #90b3eb;
-  font-family: Arial, sans-serif;
-  overflow: hidden;
+    min-height: 100vh;
+    background: #dff5f9;
+    font-family: Arial, sans-serif;
+    color: #3f4f53;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
 }
 
-.magica {
-  position: relative;
-  padding: 50px 80px;
-  text-align: center;
-  color: white;
-  border-radius: 25px;
-  background: linear-gradient(
-    135deg,
-    #7aa3e0,
-    #0875c9,
-    #00bfff,
-    #99b7e6
-  );
-  background-size: 300% 300%;
-  animation: azul 6s ease infinite;
-
-  box-shadow:
-    0 0 20px #008cff,
-    0 0 50px #006eff,
-    0 0 100px #004cff;
+/* CARD PRINCIPAL */
+.container {
+    width: 100%;
+    max-width: 480px;
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(50, 120, 135, 0.12);
 }
 
-.magica::before {
-  content: "";
-  position: absolute;
-  inset: -3px;
-  border-radius: 28px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    #6ee7ff,
-    transparent
-  );
-  animation: brilho 3s linear infinite;
-  z-index: -1;
-}
-
+/* TÍTULO */
 h1 {
-  font-size: 45px;
-  margin: 0 0 10px;
-  text-shadow: 0 0 15px #7eeaff;
+    padding: 24px 28px;
+    background: #b8e7f0;
+
+    font-size: 25px;
+    font-weight: 500;
+    color: #34545b;
 }
 
-p {
-  font-size: 18px;
-  opacity: 0.9;
+/* ÁREA DA CONSULTA */
+form {
+    padding: 28px;
 }
 
-@keyframes azul {
-  0% {
-    background-position: 0% 50%;
-  }
+label {
+    display: block;
+    margin-bottom: 7px;
 
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
+    font-size: 14px;
+    color: #60777c;
 }
 
-@keyframes brilho {
-  0% {
-    transform: translateX(-100%);
-  }
+input {
+    width: 100%;
+    height: 45px;
 
-  100% {
-    transform: translateX(100%);
-  }
+    padding: 0 13px;
+
+    border: 1px solid #d5e5e8;
+    border-radius: 8px;
+
+    background: #fafcfc;
+
+    font-size: 15px;
+    color: #3f4f53;
+
+    outline: none;
+}
+
+input:focus {
+    border-color: #8bcbd8;
+    background: #ffffff;
+}
+
+/* BOTÃO CONSULTAR */
+button {
+    width: 100%;
+    height: 45px;
+
+    margin-top: 8px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #66bfd0;
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: #55b3c5;
+}
+
+/* RESULTADO */
+#resultado {
+    margin: 0 28px 22px;
+    padding: 22px;
+
+    background: #f7fbfc;
+    border-radius: 10px;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* TÍTULO DO RESULTADO */
+#resultado h2 {
+    margin-bottom: 15px;
+
+    font-size: 19px;
+    font-weight: 500;
+    color: #3f6870;
+}
+
+/* INFORMAÇÕES */
+#resultado p {
+    margin-bottom: 8px;
+}
+
+#resultado strong {
+    color: #536c72;
+}
+
+/* GOOGLE MAPS */
+#linkMaps {
+    display: block;
+
+    margin: 0 28px 10px;
+    padding: 13px;
+
+    background: #66bfd0;
+    color: white;
+
+    border-radius: 8px;
+
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 15px;
+}
+
+#linkMaps:hover {
+    background: #55b3c5;
+}
+
+/* NOVA CONSULTA */
+.nova-consulta {
+    display: block;
+
+    margin: 0 28px 28px;
+
+    color: #579aaa;
+
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+.nova-consulta:hover {
+    text-decoration: underline;
+}
+
+/* CELULAR */
+@media (max-width: 500px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 22px;
+        padding: 21px;
+    }
+
+    form {
+        padding: 22px;
+    }
+
+    #resultado {
+        margin-left: 22px;
+        margin-right: 22px;
+    }
+
+    #linkMaps {
+        margin-left: 22px;
+        margin-right: 22px;
+    }
+
+    .nova-consulta {
+        margin-left: 22px;
+        margin-right: 22px;
+    }
 }
