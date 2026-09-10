@@ -4,10 +4,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style.css">
 
@@ -16,29 +13,30 @@
 
 <body>
 
-    <h1>Resultado da consulta</h1>
+    <div class="container">
 
-    <div
-        id="resultado"
-        role="status"
-        aria-live="polite"
-    ></div>
+        <h1>Resultado da consulta</h1>
 
-    <a
-        id="linkMaps"
-        hidden
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        Abrir no Google Maps
-    </a>
+        <div
+            id="resultado"
+            role="status"
+            aria-live="polite">
+        </div>
 
-    <p>
-        <a href="index.html">Fazer nova consulta</a>
-    </p>
+        <a
+            id="linkMaps"
+            hidden
+            target="_blank"
+            rel="noopener noreferrer">
+            Abrir no Google Maps
+        </a>
+
+        <a
+            class="nova-consulta"
+            href="index.html">
+            Fazer nova consulta
+        </a>
+
+    </div>
 
     <script src="resultado.js"></script>
-
-</body>
-
-</html>
