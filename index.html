@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+<head>  
+      <!--esse bloco é para conectar um arquivo no outro-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
@@ -10,13 +11,15 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Consulta CEP">
-    <title>Consulta de CEP</title>
+    <title>Consulta de CEP</title> 
+
 </head>
-<body>
+<body>  
+    <!--é a área principal do site-->
    <div class="container">
-   <h1>Consulta de CEP</h1>
+   <h1>Consulta de CEP</h1>   <!--titulo do página-->
   <form id="formConsulta">
-  <label for="cep">CEP</label>
+  <label for="cep">CEP</label>  <!--campo para digitar o cep-->
     <input
        id="cep"
          type="text"
@@ -24,14 +27,14 @@
       maxlength="9"
        placeholder="01001-000"
        required >
-            <label for="cidade">Cidade</label>
+            <label for="cidade">Cidade</label> <!--campo para digitar a cidade-->
             <input  
           id="cidade"
            type="text"
       placeholder="São Paulo"
                 required >
             <button type="submit">
-                Consultar Endereço
+                Consultar Endereço   <!--essa parte é para consultar os dados -->
             </button>
         </form>
         <p
@@ -44,7 +47,7 @@
             id="linkMaps"
             href="#"
             hidden>
-            Ver no Google Maps
+            Ver no Google Maps    <!-- aqui é para ver o endereço no google maps-->
         </a>
     </div>
     <script src="index.js"></script>
