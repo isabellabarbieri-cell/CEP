@@ -4,24 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#66bfd0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Consulta CEP">
     <title>Consulta de CEP</title>
 </head>
 <body>
-    <form id="formConsulta">
- <label for="cep">CEP</label>
- <input id="cep" type="text" inputmode="numeric"
- maxlength="9" placeholder="01001-000" required>
- <label for="cidade">Cidade</label>
- <input id="cidade" type="text"
- placeholder="São Paulo" required>
- <button type="submit">Consultar Endereço</button>
-</form>
-<p id="mensagem" role="status" aria-live="polite"></p>
-<script src="index.js"></script>
-<div id="resultado"></div>
-<a id="linkMaps"href="#" hidden>
-    Ver no Google Maps
-</a>
-
+   <div class="container">
+   <h1>Consulta de CEP</h1>
+  <form id="formConsulta">
+  <label for="cep">CEP</label>
+    <input
+       id="cep"
+         type="text"
+       inputmode="numeric"
+      maxlength="9"
+       placeholder="01001-000"
+       required >
+            <label for="cidade">Cidade</label>
+            <input  
+          id="cidade"
+           type="text"
+      placeholder="São Paulo"
+                required >
+            <button type="submit">
+                Consultar Endereço
+            </button>
+        </form>
+        <p
+            id="mensagem"
+            role="status"
+            aria-live="polite">
+        </p>
+        <div id="resultado"></div>
+        <a
+            id="linkMaps"
+            href="#"
+            hidden>
+            Ver no Google Maps
+        </a>
+    </div>
+    <script src="index.js"></script>
 </body>
 </html>

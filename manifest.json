@@ -1,0 +1,21 @@
+{
+  "name": "Consulta de CEP",
+  "short_name": "Consulta CEP",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#dff5f9",
+  "theme_color": "#66bfd0",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icone.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icone.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

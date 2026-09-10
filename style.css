@@ -4,7 +4,13 @@
     box-sizing: border-box;
 }
 
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
+    width: 100%;
     min-height: 100vh;
     background: #dff5f9;
     font-family: Arial, sans-serif;
@@ -13,32 +19,41 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px 15px;
+
+    padding: 20px 12px;
 }
 
 /* CARD PRINCIPAL */
 .container {
     width: 100%;
     max-width: 480px;
+
     background: #ffffff;
     border-radius: 18px;
     overflow: hidden;
+
     box-shadow: 0 8px 30px rgba(50, 120, 135, 0.12);
 }
 
 /* TÍTULO */
 h1 {
-    padding: 24px 28px;
+    width: 100%;
+
+    padding: 22px 24px;
+
     background: #b8e7f0;
 
-    font-size: 25px;
+    font-size: 24px;
     font-weight: 500;
     color: #34545b;
+
+    text-align: center;
 }
 
-/* ÁREA DA CONSULTA */
+/* FORMULÁRIO */
 form {
-    padding: 28px;
+    width: 100%;
+    padding: 24px;
 }
 
 label {
@@ -50,6 +65,8 @@ label {
 }
 
 input {
+    display: block;
+
     width: 100%;
     height: 45px;
 
@@ -71,12 +88,14 @@ input:focus {
     background: #ffffff;
 }
 
-/* BOTÃO CONSULTAR */
+/* BOTÃO */
 button {
+    display: block;
+
     width: 100%;
     height: 45px;
 
-    margin-top: 8px;
+    margin-top: 10px;
 
     border: none;
     border-radius: 8px;
@@ -95,22 +114,27 @@ button:hover {
 
 /* RESULTADO */
 #resultado {
-    margin: 0 28px 22px;
-    padding: 22px;
+    width: calc(100% - 48px);
+
+    margin: 0 24px 20px;
+    padding: 20px;
 
     background: #f7fbfc;
     border-radius: 10px;
 
     font-size: 15px;
-    line-height: 1.7;
+    line-height: 1.6;
+
+    overflow-wrap: break-word;
 }
 
 /* TÍTULO DO RESULTADO */
 #resultado h2 {
-    margin-bottom: 15px;
+    margin-bottom: 14px;
 
     font-size: 19px;
     font-weight: 500;
+
     color: #3f6870;
 }
 
@@ -127,7 +151,9 @@ button:hover {
 #linkMaps {
     display: block;
 
-    margin: 0 28px 10px;
+    width: calc(100% - 48px);
+
+    margin: 0 24px 12px;
     padding: 13px;
 
     background: #66bfd0;
@@ -139,6 +165,8 @@ button:hover {
     text-decoration: none;
 
     font-size: 15px;
+
+    overflow-wrap: break-word;
 }
 
 #linkMaps:hover {
@@ -149,7 +177,9 @@ button:hover {
 .nova-consulta {
     display: block;
 
-    margin: 0 28px 28px;
+    width: calc(100% - 48px);
+
+    margin: 0 24px 24px;
 
     color: #579aaa;
 
@@ -163,38 +193,97 @@ button:hover {
     text-decoration: underline;
 }
 
-/* CELULAR */
+/* CELULARES */
 @media (max-width: 500px) {
 
     body {
-        padding: 20px 12px;
+        min-height: 100vh;
+        padding: 12px 10px;
+        align-items: flex-start;
     }
 
     .container {
+        width: 100%;
         max-width: 100%;
+        margin-top: 10px;
+        border-radius: 15px;
     }
 
     h1 {
-        font-size: 22px;
-        padding: 21px;
+        padding: 19px 16px;
+        font-size: 21px;
     }
 
     form {
-        padding: 22px;
+        padding: 20px;
+    }
+
+    input,
+    button {
+        height: 44px;
     }
 
     #resultado {
-        margin-left: 22px;
-        margin-right: 22px;
+        width: calc(100% - 40px);
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 17px;
+        font-size: 14px;
+    }
+
+    #resultado h2 {
+        font-size: 18px;
     }
 
     #linkMaps {
-        margin-left: 22px;
-        margin-right: 22px;
+        width: calc(100% - 40px);
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 14px;
     }
 
     .nova-consulta {
-        margin-left: 22px;
-        margin-right: 22px;
+        width: calc(100% - 40px);
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+/* CELULARES BEM PEQUENOS */
+@media (max-width: 360px) {
+
+    body {
+        padding: 8px;
+    }
+
+    .container {
+        border-radius: 12px;
+    }
+
+    h1 {
+        font-size: 19px;
+        padding: 17px 12px;
+    }
+
+    form {
+        padding: 16px;
+    }
+
+    #resultado {
+        width: calc(100% - 32px);
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    #linkMaps {
+        width: calc(100% - 32px);
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .nova-consulta {
+        width: calc(100% - 32px);
+        margin-left: 16px;
+        margin-right: 16px;
     }
 }
